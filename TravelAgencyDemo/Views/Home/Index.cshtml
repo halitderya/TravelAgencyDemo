@@ -1,0 +1,59 @@
+﻿@model List<TravelAgencyDemo.Hotelsbed.Hotels.Hotel>
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div> 
+        <table class="table table-hovered table-responsive ">
+            <tr>
+                <th>Code</th>
+
+                <th>Name</th>
+                <th>Telephone</th>
+                <th>Country Code</th>
+                <th>Destination Code</th>
+                <th>Postal Code</th>
+                <th>Zone Code</th>
+
+
+            </tr>
+            @{
+
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@item.Code</th>
+
+                   <th>@item.Name</th> 
+                   <th>@item.Telephone</th> 
+                    <th>@item.CountryCode</th>
+                    <th>@item.DestinationCode</th>
+                    <th>@item.PostalCode</th>
+                    <th>@item.ZoneCode</th>
+                      
+                        </tr>
+                }
+
+
+
+
+            }
+          
+           
+        </table>
+
+      
+
+    </div>
+</body>
+</html>
